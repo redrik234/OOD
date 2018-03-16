@@ -1,7 +1,10 @@
 #include "stdafx.h"
 #include "longArithmetic.h"
 #include <stdexcept>
-
+namespace
+{
+	const int MAX_NUM_DIGITS = 10;
+}
 
 CLongNumber::CLongNumber(std::string & number)
 {
@@ -29,8 +32,8 @@ CLongNumber::CLongNumber(int number)
 {
 	while (number != 0)
 	{
-		m_number.push_back(number % 10);
-		number /= 10;
+		m_number.push_back(number % MAX_NUM_DIGITS);
+		number /= MAX_NUM_DIGITS;
 	}
 }
 
@@ -73,10 +76,10 @@ const CLongNumber operator+(const CLongNumber & lValue, const CLongNumber & rVal
 		}
 		result.m_number[i] += carry + (i < operand.GetSize() ? operand.m_number[i] : 0);
 
-		carry = result.m_number[i] >= 10;
+		carry = result.m_number[i] >= MAX_NUM_DIGITS;
 		if (carry)
 		{
-			result.m_number[i] -= 10;
+			result.m_number[i] -= MAX_NUM_DIGITS;
 		}
 	}
 	result.Normalize();
@@ -94,7 +97,7 @@ const CLongNumber operator-(const CLongNumber & lValue, const CLongNumber & rVal
 		carry = result.m_number[i] < 0;
 		if (carry)
 		{
-			result.m_number[i] += 10;
+			result.m_number[i] += MAX_NUM_DIGITS;
 		}
 	}
 	result.Normalize();
@@ -108,21 +111,21 @@ const CLongNumber operator*(const CLongNumber & lValue, const CLongNumber & rVal
 	int length = lValue.GetSize() + rValue.GetSize();
 	result.m_number.resize(length);
 
-	for (int ix = 0; ix < rValue.GetSize(); ++ix)
-		for (int jx = 0; jx < lValue.GetSize(); ++jx)
-			result.m_number[ix + jx] += rValue.m_number[ix] * lValue.m_number[jx];
+	for (int i = 0; i < rValue.GetSize(); ++i)
+		for (int j = 0; j < lValue.GetSize(); ++j)
+			result.m_number[i + j] += rValue.m_number[i] * lValue.m_number[j];
 
-	for (int ix = 0; ix < length; ix++)
+	for (int i = 0; i < length; i++)
 	{
-		if (ix + 1 != length)
+		if (i + 1 != length)
 		{
-			result.m_number[ix + 1] += result.m_number[ix] / 10;
+			result.m_number[i + 1] += result.m_number[i] / MAX_NUM_DIGITS;
 		}
 		else
 		{
-			result.m_number.push_back(result.m_number[ix] / 10);
+			result.m_number.push_back(result.m_number[i] / MAX_NUM_DIGITS);
 		}
-		result.m_number[ix] %= 10;
+		result.m_number[i] %= MAX_NUM_DIGITS;
 	}
 
 	while (result.m_number[length] == 0)
@@ -135,7 +138,11 @@ const CLongNumber operator/(const CLongNumber & lValue, const CLongNumber & rVal
 {
 	CLongNumber dividend;
 	CLongNumber result;
-	CLongNumber quotient;
+
+	if (rValue.GetSize() == 1 && rValue.m_number[0] == 0)
+	{
+		throw std::invalid_argument("division by zero is not allowed");
+	}
 
 	for (int i = lValue.GetSize() - 1; i >= 0; --i)
 	{
@@ -153,6 +160,7 @@ const CLongNumber operator/(const CLongNumber & lValue, const CLongNumber & rVal
 		if(dividend >= rValue)
 		{
 			CLongNumber divider = rValue;
+
 			int j = 1;
 			if (dividend == divider)
 			{
