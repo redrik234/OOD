@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="CCircle.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="CPoint.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="CRectangle.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="CShape.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangle.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="CRectangleCreator.cpp">
+      <Filter>creator</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircleCreator.cpp">
+      <Filter>creator</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangleCreator.cpp">
+      <Filter>creator</Filter>
+    </ClCompile>
+    <ClCompile Include="CFactory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CCircle.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="CPoint.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="CRectangle.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="CShape.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangle.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="IShape.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="IShapeCreator.h">
+      <Filter>creator</Filter>
+    </ClInclude>
+    <ClInclude Include="CRectangleCreator.h">
+      <Filter>creator</Filter>
+    </ClInclude>
+    <ClInclude Include="CCircleCreator.h">
+      <Filter>creator</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangleCreator.h">
+      <Filter>creator</Filter>
+    </ClInclude>
+    <ClInclude Include="CFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+    <Text Include="ReadMe.txt" />
+    <Text Include="output.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="shape">
+      <UniqueIdentifier>{1226d225-f7e3-4c7a-b864-a39951577a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="creator">
+      <UniqueIdentifier>{47609f5c-19e7-4488-b152-cc4e3918d5e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
