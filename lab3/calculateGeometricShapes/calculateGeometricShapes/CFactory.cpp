@@ -7,7 +7,7 @@ IShapeCreator & GetShapeCreatorInstance(const std::string & name)
 	{
 		return CTriangleCreator::GetInstance();
 	}
-	else if (name == "RECTANGLE")
+	if (name == "RECTANGLE")
 	{
 		return CRectangleCreator::GetInstance();
 	}
