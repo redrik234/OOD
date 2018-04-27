@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\Shapes">
+      <UniqueIdentifier>{00abc300-8c64-441c-82ea-ef28cd9aea9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\LongArithmetic">
+      <UniqueIdentifier>{a9320af7-76d6-42c4-a3de-ccfbc3d8f449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Shapes">
+      <UniqueIdentifier>{df0aa23d-ae5c-4b6b-820b-eb4fe3aee6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\LongArithmetic">
+      <UniqueIdentifier>{3a7e81c9-c92b-4a3d-9034-e3cfa5bbc573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\ShapeCreators">
+      <UniqueIdentifier>{9fc213e4-8331-46e4-8d21-214dd45c5fe1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\ShapeCreators">
+      <UniqueIdentifier>{7a0499fa-d3d7-4714-bba0-c4f7b2cc0792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Visitor">
+      <UniqueIdentifier>{b47f22ef-66dc-432e-9327-bf1132dd9746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Visitor">
+      <UniqueIdentifier>{8a6a7969-85ce-4665-b18f-a2a972ded374}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CCircle.h">
+      <Filter>Файлы заголовков\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CPoint.h">
+      <Filter>Файлы заголовков\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CShape.h">
+      <Filter>Файлы заголовков\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CRectangle.h">
+      <Filter>Файлы заголовков\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangle.h">
+      <Filter>Файлы заголовков\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="IShape.h">
+      <Filter>Файлы заголовков\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="longArithmetic.h">
+      <Filter>Файлы заголовков\LongArithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="CCircleCreator.h">
+      <Filter>Файлы заголовков\ShapeCreators</Filter>
+    </ClInclude>
+    <ClInclude Include="CRectangleCreator.h">
+      <Filter>Файлы заголовков\ShapeCreators</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangleCreator.h">
+      <Filter>Файлы заголовков\ShapeCreators</Filter>
+    </ClInclude>
+    <ClInclude Include="IShapeCreator.h">
+      <Filter>Файлы заголовков\ShapeCreators</Filter>
+    </ClInclude>
+    <ClInclude Include="CFactory.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CStreamOutputVisitor.h">
+      <Filter>Файлы заголовков\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="IShapeVisitor.h">
+      <Filter>Файлы заголовков\Visitor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircle.cpp">
+      <Filter>Исходные файлы\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CPoint.cpp">
+      <Filter>Исходные файлы\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CRectangle.cpp">
+      <Filter>Исходные файлы\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CShape.cpp">
+      <Filter>Исходные файлы\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangle.cpp">
+      <Filter>Исходные файлы\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="longArithmetic.cpp">
+      <Filter>Исходные файлы\LongArithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircleCreator.cpp">
+      <Filter>Исходные файлы\ShapeCreators</Filter>
+    </ClCompile>
+    <ClCompile Include="CRectangleCreator.cpp">
+      <Filter>Исходные файлы\ShapeCreators</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangleCreator.cpp">
+      <Filter>Исходные файлы\ShapeCreators</Filter>
+    </ClCompile>
+    <ClCompile Include="CFactory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CStreamOutputVisitor.cpp">
+      <Filter>Исходные файлы\Visitor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
+    <Text Include="output.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
