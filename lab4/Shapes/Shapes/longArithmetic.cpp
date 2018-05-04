@@ -307,7 +307,8 @@ const CLongNumber sqrt(const CLongNumber & number)
 	pos--;
 	while (pos >= 0)
 	{
-		int l = 0, r = 10;
+		int l = 0;
+		int r = 10;
 		int curDigit = 0;
 		while (l <= r)
 		{
